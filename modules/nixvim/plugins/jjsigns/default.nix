@@ -76,7 +76,7 @@
       '';
     in
     lib.mkIf config.plugins.jjsigns.enable {
-      extraPackages = [ pkgs.jujutsu ];
+      dependencies.jujutsu.enable = lib.mkDefault true;
 
       extraPlugins = [
         {

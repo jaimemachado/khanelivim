@@ -9,10 +9,10 @@
     lint = {
       # nvim-lint documentation
       # See: https://github.com/mfussenegger/nvim-lint
-      enable = true;
+      enable = lib.mkDefault true;
 
       autoInstall = {
-        enable = true;
+        enable = lib.mkDefault true;
 
         overrides = {
           xmllint = pkgs.libxml2;
@@ -27,7 +27,6 @@
           "BufReadPost"
           "BufWritePost"
           "InsertLeave"
-          "TextChanged"
         ];
         callback.__raw = ''
           function(args)
