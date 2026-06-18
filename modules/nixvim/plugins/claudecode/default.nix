@@ -5,7 +5,7 @@
 }:
 {
   plugins = {
-    claudecode = {
+    claude-code = {
       enable = builtins.elem "claudecode" config.khanelivim.ai.plugins;
 
       settings = {
@@ -37,7 +37,7 @@
       };
     };
 
-    which-key.settings.spec = lib.optionals config.plugins.claudecode.enable [
+    which-key.settings.spec = lib.optionals config.plugins.claude-code.enable [
       {
         __unkeyed-1 = "<leader>ac";
         group = "Claude Code";
@@ -50,7 +50,7 @@
     ];
   };
 
-  keymaps = lib.mkIf config.plugins.claudecode.enable [
+  keymaps = lib.mkIf config.plugins.claude-code.enable [
     {
       mode = "n";
       key = "<leader>act";
