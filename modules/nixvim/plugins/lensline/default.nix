@@ -8,7 +8,7 @@
     plugins.lensline = {
       # lensline.nvim documentation
       # See: https://github.com/oribarilan/lensline.nvim
-      enable = true;
+      enable = lib.mkDefault true;
 
       lazyLoad.settings.event = [
         "BufReadPost"
@@ -54,7 +54,7 @@
           max_lines = 2000;
           max_lenses = 100;
         };
-        debounce_ms = 300;
+        debounce_ms = 500;
       };
     };
 
